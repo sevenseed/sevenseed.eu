@@ -8,14 +8,11 @@ export default function HeroSection() {
 					Building the Future of European Startups
 				</h1>
 				<p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
-					Seven Seed is a Brussels-based group dedicated to empowering
-					the European startup ecosystem, focused on the technologies
-					that matter most:{" "}
-					<strong className="text-gray-900">
-						Artificial Intelligence
-					</strong>{" "}
-					and{" "}
-					<strong className="text-gray-900">Defence</strong>.
+					Seven Seed is a Brussels-based group dedicated to empowering the
+					European startup ecosystem, focused on the technologies that matter
+					most:{" "}
+					<strong className="text-gray-900">Artificial Intelligence</strong>{" "}
+					and <strong className="text-gray-900">Defence</strong>.
 				</p>
 				<div className="mt-10 flex items-center justify-center gap-x-6">
 					<Button href="/about" variant="solid" color="blue">

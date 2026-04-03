@@ -15,19 +15,19 @@
 		"@headlessui/react": "^2.2.9",
 		"@heroicons/react": "^2.2.0",
 		"@lostisworld/tailwind-mask": "^1.0.1",
-		"@tailwindcss/postcss": "^4.1.18",
-		"@types/node": "25.2.2",
-		"@types/react": "19.2.13",
+		"@tailwindcss/postcss": "^4.2.2",
+		"@types/node": "25.5.0",
+		"@types/react": "19.2.14",
 		"@types/react-dom": "19.2.3",
-		"autoprefixer": "10.4.24",
+		"autoprefixer": "10.4.27",
 		"clsx": "^2.1.1",
-		"eslint-config-next": "^16.1.6",
-		"next": "^16.1.6",
-		"postcss": "^8.5.6",
+		"eslint-config-next": "^16.2.2",
+		"next": "^16.2.2",
+		"postcss": "^8.5.8",
 		"prettier": "^3.8.1",
 		"react": "19.2.4",
 		"react-dom": "19.2.4",
-		"tailwindcss": "^4.1.18"
+		"tailwindcss": "^4.2.2"
 	},
 	"prettier": {
 		"trailingComma": "all",
@@ -37,12 +37,12 @@
 		"endOfLine": "auto"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.39.2",
+		"@eslint/js": "^10.0.1",
 		"@tailwindcss/typography": "^0.5.19",
-		"eslint": "^9.39.2",
+		"eslint": "^10.1.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-prettier": "^5.5.5",
-		"typescript": "^5.9.3",
-		"typescript-eslint": "^8.55.0"
+		"typescript": "^6.0.2",
+		"typescript-eslint": "^8.58.0"
 	}
 }

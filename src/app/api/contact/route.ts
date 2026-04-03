@@ -1,26 +1,19 @@
 import { NextResponse } from "next/server";
 
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
-const CONTACT_RECIPIENT =
-	process.env.CONTACT_RECIPIENT || "info@sevenseed.eu";
-const CONTACT_FROM =
-	process.env.CONTACT_FROM || "notifications@sevenseed.eu";
+const CONTACT_RECIPIENT = process.env.CONTACT_RECIPIENT || "info@sevenseed.eu";
+const CONTACT_FROM = process.env.CONTACT_FROM || "notifications@sevenseed.eu";
 
 const SENDGRID_ENDPOINT = "https://api.sendgrid.com/v3/mail/send";
 
 export async function POST(request: Request) {
 	try {
 		const body = await request.json();
-		const fullName =
-			typeof body.fullName === "string" ? body.fullName.trim() : "";
-		const email =
-			typeof body.email === "string" ? body.email.trim() : "";
+		const fullName = typeof body.fullName === "string" ? body.fullName.trim() : "";
+		const email = typeof body.email === "string" ? body.email.trim() : "";
 		const organisation =
-			typeof body.organisation === "string"
-				? body.organisation.trim()
-				: "";
-		const message =
-			typeof body.message === "string" ? body.message.trim() : "";
+			typeof body.organisation === "string" ? body.organisation.trim() : "";
+		const message = typeof body.message === "string" ? body.message.trim() : "";
 
 		if (!fullName || !email || !message) {
 			return NextResponse.json(

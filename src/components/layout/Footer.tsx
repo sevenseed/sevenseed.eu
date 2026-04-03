@@ -32,9 +32,7 @@ export default function Footer() {
 
 					{/* Pages column */}
 					<div>
-						<h3 className="font-semibold text-gray-900 mb-4">
-							Pages
-						</h3>
+						<h3 className="font-semibold text-gray-900 mb-4">Pages</h3>
 						<nav
 							className="flex flex-col gap-y-2"
 							aria-label="Footer navigation"
@@ -62,9 +60,7 @@ export default function Footer() {
 
 					{/* Partners column */}
 					<div>
-						<h3 className="font-semibold text-gray-900 mb-4">
-							Partners
-						</h3>
+						<h3 className="font-semibold text-gray-900 mb-4">Partners</h3>
 						<nav className="flex flex-col gap-y-2">
 							<a
 								href="https://eu-inc.org"
@@ -87,9 +83,7 @@ export default function Footer() {
 
 					{/* Connect column */}
 					<div>
-						<h3 className="font-semibold text-gray-900 mb-4">
-							Connect
-						</h3>
+						<h3 className="font-semibold text-gray-900 mb-4">Connect</h3>
 						<div className="flex gap-x-4">
 							<a
 								href="https://www.linkedin.com/company/seven-seed"
@@ -115,8 +109,8 @@ export default function Footer() {
 				{/* Bottom section with copyright */}
 				<div className="pt-8 border-t border-gray-200">
 					<p className="text-xs text-center text-gray-500">
-						&copy; {new Date().getUTCFullYear()} Seven Seed SRL. All
-						rights reserved.
+						&copy; {new Date().getUTCFullYear()} Seven Seed SRL. All rights
+						reserved.
 					</p>
 				</div>
 			</div>

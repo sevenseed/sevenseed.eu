@@ -51,8 +51,8 @@ export default function PillarsSection() {
 						Our Pillars
 					</h2>
 					<p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-						Three complementary initiatives working together to
-						build a stronger European startup ecosystem.
+						Three complementary initiatives working together to build a
+						stronger European startup ecosystem.
 					</p>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">

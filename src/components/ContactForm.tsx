@@ -21,9 +21,9 @@ const inputClassName =
 
 export default function ContactForm() {
 	const [form, setForm] = useState<FormState>(initialFormState);
-	const [status, setStatus] = useState<
-		"idle" | "submitting" | "success" | "error"
-	>("idle");
+	const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">(
+		"idle",
+	);
 	const [error, setError] = useState<string | null>(null);
 
 	const handleChange =
@@ -156,9 +156,7 @@ export default function ContactForm() {
 				/>
 			</label>
 
-			{error && (
-				<p className="text-sm font-medium text-red-600">{error}</p>
-			)}
+			{error && <p className="text-sm font-medium text-red-600">{error}</p>}
 
 			<button
 				type="submit"
