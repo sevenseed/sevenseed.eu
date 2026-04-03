@@ -1,12 +1,11 @@
-import nextConfig from "eslint-config-next";
+import { defineConfig } from "eslint/config";
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
 
-const eslintConfig = [
-	...nextConfig,
+export default defineConfig([
 	{
+		extends: [...nextCoreWebVitals],
 		rules: {
 			"@next/next/no-html-link-for-pages": "off",
 		},
 	},
-];
-
-export default eslintConfig;
+]);
