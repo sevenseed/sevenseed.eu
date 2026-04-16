@@ -1,10 +1,7 @@
 import { NextResponse } from "next/server";
+import { fromAddress, sendEmail } from "@/lib/email";
 
-const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
 const CONTACT_RECIPIENT = process.env.CONTACT_RECIPIENT || "info@sevenseed.eu";
-const CONTACT_FROM = process.env.CONTACT_FROM || "notifications@sevenseed.eu";
-
-const SENDGRID_ENDPOINT = "https://api.sendgrid.com/v3/mail/send";
 
 export async function POST(request: Request) {
 	try {
@@ -19,13 +16,6 @@ export async function POST(request: Request) {
 			return NextResponse.json(
 				{ error: "Please complete all required fields." },
 				{ status: 400 },
-			);
-		}
-
-		if (!SENDGRID_API_KEY) {
-			return NextResponse.json(
-				{ error: "Email service is not configured." },
-				{ status: 500 },
 			);
 		}
 
@@ -65,40 +55,14 @@ export async function POST(request: Request) {
 
 		const textContent = `New contact form submission\n\nFull name: ${fullName}\nEmail: ${email}\n${organisation ? `Organisation: ${organisation}\n` : ""}\nMessage:\n${message}\n\nSent from sevenseed.eu`;
 
-		const payload = {
-			personalizations: [
-				{
-					to: [{ email: CONTACT_RECIPIENT }],
-					subject: `Contact form: ${fullName}`,
-				},
-			],
-			from: { email: CONTACT_FROM, name: "Seven Seed" },
-			reply_to: { email, name: fullName },
-			content: [
-				{ type: "text/plain", value: textContent },
-				{ type: "text/html", value: htmlContent },
-			],
-		};
-
-		const emailResponse = await fetch(SENDGRID_ENDPOINT, {
-			method: "POST",
-			headers: {
-				Authorization: `Bearer ${SENDGRID_API_KEY}`,
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(payload),
+		await sendEmail({
+			to: CONTACT_RECIPIENT,
+			subject: `Contact form: ${fullName}`,
+			from: fromAddress("Seven Seed"),
+			replyTo: email,
+			text: textContent,
+			html: htmlContent,
 		});
-
-		if (!emailResponse.ok) {
-			const errorBody = await emailResponse.text();
-			console.error("SendGrid error:", errorBody);
-			return NextResponse.json(
-				{
-					error: "We could not send your message. Please try again later.",
-				},
-				{ status: 502 },
-			);
-		}
 
 		return NextResponse.json({ success: true });
 	} catch (error) {
