@@ -10,11 +10,14 @@
 		"format": "biome format --write .",
 		"type-check": "tsc --noEmit",
 		"typecheck:watch": "tsc --noEmit --watch --preserveWatchOutput --project tsconfig.watch.json",
-		"ci": "bun run type-check && bun run lint"
+		"ci": "bun run type-check && bun run lint",
+		"check": "biome check .",
+		"prepare": "git config core.hooksPath .githooks || true"
 	},
 	"dependencies": {
 		"@headlessui/react": "^2.2.10",
 		"@heroicons/react": "^2.2.0",
+		"@ingram-tech/email": "^0.1.0",
 		"@lostisworld/tailwind-mask": "^1.0.1",
 		"@tailwindcss/postcss": "^4.2.2",
 		"@types/node": "25.6.0",
@@ -29,7 +32,10 @@
 		"tailwindcss": "^4.2.2"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.4.12",
+		"@biomejs/biome": "^2.4.15",
+		"@ingram-tech/biome-config": "^0.1.0",
+		"@ingram-tech/git-hooks": "^0.1.0",
+		"@ingram-tech/typescript-config": "^0.1.0",
 		"@tailwindcss/typography": "^0.5.19",
 		"typescript": "^6.0.2"
 	}
