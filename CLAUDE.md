@@ -113,3 +113,10 @@ Before committing, ensure:
 1. `npm run lint` passes without warnings
 2. `npm run build` completes successfully
 3. TypeScript has no errors (check with watch mode)
+
+## nextkit
+
+Shared agent conventions live in nextkit and propagate via the import below
+(do not hand-copy them here).
+
+@./node_modules/@ingram-tech/agent-guide/guide.md
