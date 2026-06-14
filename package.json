@@ -6,12 +6,12 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "biome lint .",
-		"format": "biome format --write .",
+		"lint": "oxlint",
+		"format": "oxfmt --write .",
 		"type-check": "tsc --noEmit",
 		"typecheck:watch": "tsc --noEmit --watch --preserveWatchOutput --project tsconfig.watch.json",
 		"ci": "bun run type-check && bun run lint",
-		"check": "biome check .",
+		"check": "oxlint && oxfmt --check .",
 		"prepare": "git config core.hooksPath .githooks || true"
 	},
 	"dependencies": {
@@ -32,12 +32,13 @@
 		"tailwindcss": "^4.2.2"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.4.15",
 		"@ingram-tech/agent-guide": "0.1.0",
-		"@ingram-tech/biome-config": "^0.1.0",
 		"@ingram-tech/git-hooks": "^0.1.0",
+		"@ingram-tech/oxlint-config": "^0.1.0",
 		"@ingram-tech/typescript-config": "^0.1.0",
 		"@tailwindcss/typography": "^0.5.19",
+		"oxfmt": "^0.54.0",
+		"oxlint": "^1.69.0",
 		"typescript": "^6.0.2"
 	}
 }
