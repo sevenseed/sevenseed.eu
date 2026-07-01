@@ -18,6 +18,7 @@
 		"@headlessui/react": "^2.2.10",
 		"@heroicons/react": "^2.2.0",
 		"@ingram-tech/nk-email": "^0.2.0",
+		"@ingram-tech/nk-seo": "0.3.0",
 		"@lostisworld/tailwind-mask": "^1.0.1",
 		"@tailwindcss/postcss": "^4.3.1",
 		"@types/node": "26.0.0",
