@@ -6,12 +6,12 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "oxlint",
-		"format": "oxfmt --write .",
-		"type-check": "tsc --noEmit",
+		"lint": "nk lint",
+		"format": "nk format",
+		"type-check": "nk type-check",
 		"typecheck:watch": "tsc --noEmit --watch --preserveWatchOutput --project tsconfig.watch.json",
 		"ci": "bun run type-check && bun run lint",
-		"check": "oxlint && oxfmt --check .",
+		"check": "nk check",
 		"prepare": "git config core.hooksPath .githooks || true"
 	},
 	"dependencies": {
@@ -34,12 +34,8 @@
 	},
 	"devDependencies": {
 		"@ingram-tech/agent-guide": "0.2.0",
-		"@ingram-tech/git-hooks": "^0.2.1",
-		"@ingram-tech/oxlint-config": "^0.2.2",
-		"@ingram-tech/typescript-config": "^0.1.0",
+		"@ingram-tech/nk-dev": "^0.2.5",
 		"@tailwindcss/typography": "^0.5.20",
-		"oxfmt": "^0.56.0",
-		"oxlint": "^1.71.0",
 		"typescript": "^6.0.3"
 	}
 }
