@@ -1,5 +1,6 @@
 "use client";
 
+import { HoneypotInput, useFormSubmit } from "@ingram-tech/nk-forms/react";
 import { useState, type ChangeEvent, type FormEvent } from "react";
 
 type FormState = {
@@ -21,10 +22,7 @@ const inputClassName =
 
 export default function ContactForm() {
 	const [form, setForm] = useState<FormState>(initialFormState);
-	const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">(
-		"idle",
-	);
-	const [error, setError] = useState<string | null>(null);
+	const { honeypotRef, submit, status, error } = useFormSubmit("/api/contact");
 
 	const handleChange =
 		(field: keyof FormState) =>
@@ -42,34 +40,7 @@ export default function ContactForm() {
 			return;
 		}
 
-		setStatus("submitting");
-		setError(null);
-
-		try {
-			const response = await fetch("/api/contact", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(form),
-			});
-
-			if (!response.ok) {
-				const data = await response.json().catch(() => ({}));
-				const message =
-					"error" in data
-						? data.error
-						: "Something went wrong. Please try again.";
-				throw new Error(message);
-			}
-
-			setStatus("success");
-		} catch (submissionError) {
-			setStatus("error");
-			setError(
-				submissionError instanceof Error
-					? submissionError.message
-					: "We could not send your message. Please try again later.",
-			);
-		}
+		await submit(form);
 	};
 
 	if (status === "success") {
@@ -86,7 +57,9 @@ export default function ContactForm() {
 	}
 
 	return (
-		<form className="space-y-6" onSubmit={handleSubmit}>
+		<form className="space-y-6" onSubmit={handleSubmit} noValidate>
+			<HoneypotInput inputRef={honeypotRef} />
+
 			<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 				<label
 					className="flex flex-col gap-2 text-sm text-slate-700"

@@ -8,6 +8,7 @@
         "@headlessui/react": "^2.2.10",
         "@heroicons/react": "^2.2.0",
         "@ingram-tech/nk-email": "^0.3.1",
+        "@ingram-tech/nk-forms": "^0.2.2",
         "@ingram-tech/nk-seo": "0.6.1",
         "@lostisworld/tailwind-mask": "^1.0.1",
         "@tailwindcss/postcss": "^4.3.3",
@@ -21,6 +22,7 @@
         "react": "19.2.7",
         "react-dom": "19.2.7",
         "tailwindcss": "^4.3.3",
+        "zod": "^4.4.3",
       },
       "devDependencies": {
         "@ingram-tech/agent-guide": "0.2.0",
@@ -147,9 +149,13 @@
 
     "@ingram-tech/agent-guide": ["@ingram-tech/agent-guide@0.2.0", "", {}, "sha512-xin0ClQq1+N8TZm2mr7VV2Bbom3CVV+n8syYuFY/+pOew4jSWBttlGxWNWN/oJCHO/ahPvBXfeq0v0eR+SD70w=="],
 
+    "@ingram-tech/bot-protection": ["@ingram-tech/bot-protection@0.4.1", "", { "peerDependencies": { "botid": ">=1.0.0", "react": "^18.0.0 || ^19.0.0" }, "optionalPeers": ["botid", "react"] }, "sha512-EpEeNZGNLzoajzSFBqEZhUKOLO0AQLHNQ0GPhPuH4FMKY897rQADdiDBFnLbO9CgMgPiBTdo8f2HwLsebb4kxg=="],
+
     "@ingram-tech/nk-dev": ["@ingram-tech/nk-dev@0.6.0", "", { "dependencies": { "@ast-grep/cli": "^0.44.1", "@testing-library/jest-dom": "^6.9.1", "@typescript/native": "npm:typescript@^7.0.2", "jsdom": "^29.1.1", "knip": "^6.25.0", "oxfmt": "^0.58.0", "oxlint": "^1.73.0", "typescript": "npm:@typescript/typescript6@^6.0.2", "vitest": "^4.1.10" }, "bin": { "nk": "bin/nk.js", "nextkit-format-staged": "bin/format-staged.mjs" } }, "sha512-trETJiohQGvVOhqoM3cBI+f9h/QxzqvivfErNO/Q6RR0phuojIGOeni8Avg3xKHdknXtvn/okqH2fbTjOQaXfw=="],
 
     "@ingram-tech/nk-email": ["@ingram-tech/nk-email@0.3.1", "", {}, "sha512-OOE+tPvtpGCSnACaa/XxudfbRjcCut8wK6cdT/BsoQM3L9yn6i+/Yx1l9K71Pw17cL4KUYkX4jzzAAnuK/sp3w=="],
+
+    "@ingram-tech/nk-forms": ["@ingram-tech/nk-forms@0.2.2", "", { "dependencies": { "@ingram-tech/bot-protection": "0.4.1", "@ingram-tech/nk-email": "0.3.1" }, "peerDependencies": { "react": "^18.0.0 || ^19.0.0" }, "optionalPeers": ["react"] }, "sha512-CTV4MotL28DCumheS+U1FO9zStVfhOPhHXOa3NYVSpuDfHQf7AkCunnXmzhoynCMLqbfcEkIO+ZcGHgsP+RNuQ=="],
 
     "@ingram-tech/nk-seo": ["@ingram-tech/nk-seo@0.6.1", "", { "peerDependencies": { "next": ">=14.0.0", "react": "^18.0.0 || ^19.0.0" }, "optionalPeers": ["next", "react"] }, "sha512-O4V9fLm4qg4jwPj70tJKwSU0k6p1nF3HclP2jYcbkUyd4/hNFYsiFoU+ejBeK07/azFDQn9zjAdXhok9RbUD5g=="],
 
