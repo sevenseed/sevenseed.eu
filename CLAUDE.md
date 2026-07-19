@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Seven Seed is a Next.js 15 website for a Brussels-based think tank for European startups, focused on Artificial Intelligence and Defence. The site is built with TypeScript and Tailwind CSS, English only.
+Seven Seed is a Next.js 16 website for a Brussels-based think tank for European startups, focused on Artificial Intelligence and Defence. The site is built with TypeScript and Tailwind CSS, English only.
 
 ## Critical Development Rules
 
@@ -67,7 +67,7 @@ npm run typecheck:watch
 
 ### Project Structure
 
-- **App Router**: Uses Next.js 15 App Router with pages in `src/app/`
+- **App Router**: Uses Next.js 16 App Router with pages in `src/app/`
 - **Pages**: Home (`/`), About (`/about`), Contact (`/contact`), Privacy (`/privacy`)
 - **Styling**: Tailwind CSS v4 with custom configuration and typography plugin
 - **Components**: Reusable components in `src/components/` with layout components in `src/components/layout/` and page sections in `src/components/sections/`
@@ -87,8 +87,7 @@ Components follow these conventions:
 
 ### Code Style Configuration
 
-- **Prettier**: Tab indentation (4 spaces width), trailing commas, 88 character line width
-- **ESLint**: Next.js configuration with Prettier integration
+- **Formatting/linting**: oxfmt (tab indentation, 4-width, trailing commas, 88 column) + oxlint, run via `nk` (`bun run check` / `bun run format`)
 - **TypeScript**: Strict mode with separate watch configuration
 
 ### Font & Asset Management
