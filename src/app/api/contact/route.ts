@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { fromAddress, sendEmail } from "@/lib/email";
+import { escapeHtml, fromAddress, sendEmail } from "@/lib/email";
 
 const CONTACT_RECIPIENT = process.env.CONTACT_RECIPIENT || "info@sevenseed.eu";
 
@@ -27,17 +27,17 @@ export async function POST(request: Request) {
 					<tbody>
 						<tr>
 							<td style="padding: 8px 12px; font-weight: 600; color: #1f2937;">Full name</td>
-							<td style="padding: 8px 12px; color: #374151;">${fullName}</td>
+							<td style="padding: 8px 12px; color: #374151;">${escapeHtml(fullName)}</td>
 						</tr>
 						<tr>
 							<td style="padding: 8px 12px; font-weight: 600; color: #1f2937;">Email</td>
-							<td style="padding: 8px 12px; color: #374151;">${email}</td>
+							<td style="padding: 8px 12px; color: #374151;">${escapeHtml(email)}</td>
 						</tr>
 						${
 							organisation
 								? `<tr>
 							<td style="padding: 8px 12px; font-weight: 600; color: #1f2937;">Organisation</td>
-							<td style="padding: 8px 12px; color: #374151;">${organisation}</td>
+							<td style="padding: 8px 12px; color: #374151;">${escapeHtml(organisation)}</td>
 						</tr>`
 								: ""
 						}
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
 				</table>
 				<div style="margin-top: 24px;">
 					<h3 style="color: #111827; font-size: 16px;">Message</h3>
-					<p style="white-space: pre-wrap; background: #f9fafb; border-radius: 12px; padding: 16px; color: #374151; border: 1px solid #e5e7eb;">${message}</p>
+					<p style="white-space: pre-wrap; background: #f9fafb; border-radius: 12px; padding: 16px; color: #374151; border: 1px solid #e5e7eb;">${escapeHtml(message)}</p>
 				</div>
 				<p style="color: #6b7280; font-size: 14px; margin-top: 32px;">
 					This message was submitted via the contact form on sevenseed.eu
