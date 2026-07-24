@@ -118,6 +118,4 @@ Before committing, ensure:
 Shared agent conventions live in nextkit and propagate via the import below
 (do not hand-copy them here).
 
-@./node_modules/@ingram-tech/agent-guide/guide.md
-
 @./node_modules/@ingram-tech/nk-dev/guide.md
