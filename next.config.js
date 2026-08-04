@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	experimental: {
-		useTypeScriptCli: true,
-	},
 	async redirects() {
 		return [
 			{
