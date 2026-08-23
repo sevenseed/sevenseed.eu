@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 
-export const EmailLink: FC<{
+const EmailLink: FC<{
 	email: string;
 	className?: string;
 	subject?: string;
