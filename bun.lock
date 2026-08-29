@@ -18,7 +18,7 @@
         "zod": "^4.5.4",
       },
       "devDependencies": {
-        "@ingram-tech/nk-dev": "^0.13.0",
+        "@ingram-tech/nk-dev": "^0.13.1",
         "@tailwindcss/postcss": "^4.3.3",
         "@tailwindcss/typography": "^0.5.20",
         "@types/node": "^26.4.0",
@@ -151,7 +151,7 @@
 
     "@img/sharp-win32-x64": ["@img/sharp-win32-x64@0.35.3", "", { "os": "win32", "cpu": "x64" }, "sha512-D4y1vNeZrIIJCN+uHaWVtH86B+aCrdMYYjicy9pXHvbGZeGYLLSd3wdVuC37FxVXlU1ARsk84eKWfWMXGYEqvA=="],
 
-    "@ingram-tech/nk-dev": ["@ingram-tech/nk-dev@0.13.0", "", { "dependencies": { "@ast-grep/cli": "^0.45.1", "@testing-library/dom": "^10.4.1", "@testing-library/jest-dom": "^7.0.1", "@typescript/native": "npm:typescript@^7.0.2", "jsdom": "^30.0.1", "knip": "^6.32.2", "oxfmt": "^0.63.0", "oxlint": "^1.78.0", "typescript": "npm:@typescript/typescript6@^6.0.2", "vitest": "^4.1.10" }, "bin": { "nk": "bin/nk.js", "nextkit-format-staged": "bin/format-staged.mjs" } }, "sha512-PlrdslRjHdo23B1y82ReenxJvTn6eg+j1RaNzYHDC6WMiDanFLd4CmJvJtBJ0XjDFLAn/Q/HQGZD5LXij6WMuA=="],
+    "@ingram-tech/nk-dev": ["@ingram-tech/nk-dev@0.13.1", "", { "dependencies": { "@ast-grep/cli": "^0.45.1", "@testing-library/dom": "^10.4.1", "@testing-library/jest-dom": "^7.0.1", "@typescript/native": "npm:typescript@^7.0.2", "jsdom": "^30.0.1", "knip": "^6.32.2", "oxfmt": "^0.63.0", "oxlint": "^1.78.0", "typescript": "npm:@typescript/typescript6@^6.0.2", "vitest": "^4.1.10" }, "bin": { "nk": "bin/nk.js", "nextkit-format-staged": "bin/format-staged.mjs" } }, "sha512-FnKcDSvFF2c5I8dgSblIJ7gwpZkcFbt4TNSZN1YGFL9cMglgY9zX5GJgY8PzegsLRIzL0ZqOqSC4Bmhbb6cBuw=="],
 
     "@ingram-tech/nk-email": ["@ingram-tech/nk-email@0.6.2", "", {}, "sha512-NCTZbzv53jnWtNHtZSOlUQyFxbarPBowLX7hIU0J7IDL/4hcApYkSvpENBLDMyJ9OEcoR1NGk5FdIZ/RdujZ0A=="],
 
