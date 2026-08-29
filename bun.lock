@@ -9,7 +9,7 @@
         "@heroicons/react": "^2.2.0",
         "@ingram-tech/nk-email": "^0.6.1",
         "@ingram-tech/nk-forms": "^0.3.0",
-        "@ingram-tech/nk-seo": "0.7.0",
+        "@ingram-tech/nk-seo": "^0.10.0",
         "@tailwindcss/postcss": "^4.3.3",
         "@types/node": "^26.4.0",
         "@types/react": "19.2.18",
@@ -157,7 +157,7 @@
 
     "@ingram-tech/nk-forms": ["@ingram-tech/nk-forms@0.3.0", "", { "dependencies": { "@ingram-tech/nk-email": "0.6.1" }, "peerDependencies": { "botid": ">=1.0.0", "react": "^18.0.0 || ^19.0.0" }, "optionalPeers": ["botid", "react"] }, "sha512-uXamjQoMMHwAjWzBNWc6L5rGUTiv8fylX7aHKtqcbQwC4qGua+o4EtqqvefUiMOV7XACYrzcl1muP8H3BDdTSg=="],
 
-    "@ingram-tech/nk-seo": ["@ingram-tech/nk-seo@0.7.0", "", { "peerDependencies": { "next": ">=14.0.0", "react": "^18.0.0 || ^19.0.0" }, "optionalPeers": ["next", "react"] }, "sha512-qv1Mg/O8Tk4gcvjj2jEM4vTYDwZK+KzKOQFzKBMemAayGvOBYfsCEamXumh/91KJ88Yebp8pQR+ZbX9QG0bXkA=="],
+    "@ingram-tech/nk-seo": ["@ingram-tech/nk-seo@0.10.0", "", { "peerDependencies": { "next": ">=14.0.0", "react": "^18.0.0 || ^19.0.0" }, "optionalPeers": ["next", "react"] }, "sha512-nardja8XJ1Yxv3cHEo64BndptRXUuGXlGzgYgMXNm3c6vXgz6f50bCG7ykkdNnphxG0+UvQAOl/ZrxS3MYRaYA=="],
 
     "@jridgewell/gen-mapping": ["@jridgewell/gen-mapping@0.3.13", "", { "dependencies": { "@jridgewell/sourcemap-codec": "^1.5.0", "@jridgewell/trace-mapping": "^0.3.24" } }, "sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA=="],
 

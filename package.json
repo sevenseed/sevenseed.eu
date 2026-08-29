@@ -19,7 +19,7 @@
 		"@heroicons/react": "^2.2.0",
 		"@ingram-tech/nk-email": "^0.6.1",
 		"@ingram-tech/nk-forms": "^0.3.0",
-		"@ingram-tech/nk-seo": "0.7.0",
+		"@ingram-tech/nk-seo": "^0.10.0",
 		"@tailwindcss/postcss": "^4.3.3",
 		"@types/node": "^26.4.0",
 		"@types/react": "19.2.18",
