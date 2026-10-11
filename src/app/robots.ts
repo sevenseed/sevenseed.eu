@@ -6,5 +6,5 @@ export default () =>
 	createRobots({
 		baseUrl: SITE_URL,
 		isProduction: process.env.VERCEL_ENV === "production",
-		disallow: ["/api/"],
+		disallow: ["/internal/"],
 	});

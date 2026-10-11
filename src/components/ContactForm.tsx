@@ -1,6 +1,10 @@
 "use client";
 
-import { HoneypotInput, useFormSubmit } from "@ingram-tech/nk-forms/react";
+import {
+	formEndpoint,
+	HoneypotInput,
+	useFormSubmit,
+} from "@ingram-tech/nk-forms/react";
 import { useState, type ChangeEvent, type FormEvent } from "react";
 
 type FormState = {
@@ -22,7 +26,9 @@ const inputClassName =
 
 export default function ContactForm() {
 	const [form, setForm] = useState<FormState>(initialFormState);
-	const { honeypotRef, submit, status, error } = useFormSubmit("/api/contact");
+	const { honeypotRef, submit, status, error } = useFormSubmit(
+		formEndpoint("contact"),
+	);
 
 	const handleChange =
 		(field: keyof FormState) =>
