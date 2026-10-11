@@ -6,6 +6,9 @@ import Link from "next/link";
 import GithubIcon from "../icons/GithubIcon";
 import LinkedInIcon from "../icons/LinkedInIcon";
 
+// The page is statically rendered, so the year is fixed at build time either way.
+const copyrightYear = new Date().getUTCFullYear();
+
 export default function Footer() {
 	return (
 		<footer className="flex justify-center relative mt-16 pt-32 px-8 pb-8">
@@ -109,8 +112,7 @@ export default function Footer() {
 				{/* Bottom section with copyright */}
 				<div className="pt-8 border-t border-gray-200">
 					<p className="text-xs text-center text-gray-500">
-						&copy; {new Date().getUTCFullYear()} Seven Seed SRL. All rights
-						reserved.
+						&copy; {copyrightYear} Seven Seed SRL. All rights reserved.
 					</p>
 				</div>
 			</div>
