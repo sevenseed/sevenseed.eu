@@ -11,16 +11,16 @@ Seven Seed is a Next.js 16 website for a Brussels-based think tank for European 
 ### Code Quality
 
 - **NEVER use `any`** in TypeScript - use proper types or `unknown` if necessary
-- Linting errors break the build - fix immediately
-- Run `npm run lint` before committing
+- Fix lint warnings immediately; `bun run ci` must stay silent
+- Run `bun run ci` before committing (the pre-commit hook formats staged files)
 - Use tabs for indentation (4 spaces width)
-- After making changes, ensure `npm run build` succeeds
+- After making changes, ensure `bun run build` succeeds
 
 ### Git Workflow
 
 - Commit regularly after completing tasks
 - Small, atomic commits for each completed feature/fix
-- Ensure linting passes before committing
+- Ensure `bun run ci` passes before committing
 
 ### Import Management
 
@@ -40,27 +40,21 @@ Seven Seed is a Next.js 16 website for a Brussels-based think tank for European 
 ### Development
 
 ```bash
-# Start development server
-npm run dev
-
-# Build the application
-npm run build
-
-# Start production server
-npm start
+bun install          # install dependencies
+bun dev              # start the dev server
+bun run build        # production build
+bun run start        # serve the production build
 ```
 
 ### Code Quality
 
 ```bash
-# Run linting and formatting checks
-npm run lint
-
-# Fix linting and formatting issues
-npm run lint:fix
-
-# Watch TypeScript type checking
-npm run typecheck:watch
+bun run ci              # the gate: oxlint + oxfmt + knip, then type-check
+bun run check           # oxlint + oxfmt + knip only
+bun run lint            # oxlint
+bun run format          # oxfmt (rewrites files)
+bun run type-check      # next typegen + tsc --noEmit
+bun run typecheck:watch # tsc in watch mode
 ```
 
 ## Architecture & Key Concepts
@@ -83,7 +77,7 @@ Components follow these conventions:
 - TypeScript with `.tsx` extension
 - Tailwind CSS for styling using `clsx` for conditional classes
 - Icons from `@heroicons/react` and custom icon components
-- Form handling with `@formspree/react` for contact forms
+- The contact form (`src/components/ContactForm.tsx`) posts to the `@ingram-tech/nk-forms` registry at `src/app/internal/forms/[form]/route.ts`, which validates with the Zod schema in `src/lib/schemas.ts` and delivers via `@ingram-tech/nk-email`
 
 ### Code Style Configuration
 
@@ -109,9 +103,8 @@ Components follow these conventions:
 
 Before committing, ensure:
 
-1. `npm run lint` passes without warnings
-2. `npm run build` completes successfully
-3. TypeScript has no errors (check with watch mode)
+1. `bun run ci` passes without warnings
+2. `bun run build` completes successfully
 
 ## nextkit
 
